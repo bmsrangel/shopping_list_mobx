@@ -32,7 +32,8 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
             icon: Icon(Icons.power_settings_new),
             onPressed: () {
               _secureStorage.clearUid();
-              Modular.to.pushReplacementNamed("/login");
+              Modular.to.pushNamedAndRemoveUntil(
+                  "/login", (Route<dynamic> route) => false);
             },
           )
         ],

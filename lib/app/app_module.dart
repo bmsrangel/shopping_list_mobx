@@ -1,3 +1,4 @@
+import 'package:shopping_list_mobx/app/modules/login/sign_in/sign_in_page.dart';
 import 'package:shopping_list_mobx/app/shared/services/secure_storage_service.dart';
 import 'package:shopping_list_mobx/app/modules/single_list/single_list_module.dart';
 import 'package:shopping_list_mobx/app/shared/repositories/hasura_repository.dart';
@@ -25,6 +26,7 @@ class AppModule extends MainModule {
         Router('/', module: SplashModule()),
         Router('/home', module: HomeModule()),
         Router('/login', module: LoginModule()),
+        Router('/signin', child: (_, args) => SignInPage()),
         Router('/list', module: SingleListModule())
       ];
 

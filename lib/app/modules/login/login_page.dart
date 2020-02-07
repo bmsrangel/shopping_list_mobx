@@ -98,7 +98,9 @@ class _LoginPageState extends ModularState<LoginPage, LoginController> {
                   "Crie sua conta!",
                   style: TextStyle(fontSize: 15),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Modular.to.pushNamed('/signin');
+                },
               ),
             ],
           ),

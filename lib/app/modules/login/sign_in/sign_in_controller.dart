@@ -17,6 +17,7 @@ abstract class _SignInBase with Store {
   final TextEditingController sobrenome$ = TextEditingController();
   final TextEditingController email$ = TextEditingController();
   final TextEditingController senha$ = TextEditingController();
+  final formKey = GlobalKey<FormState>();
 
   final IRepository _repo = Modular.get();
   final ISecureStorage _secureStorage = Modular.get();
