@@ -5,8 +5,7 @@ import 'package:shopping_list_mobx/app/shared/models/user_model.dart';
 abstract class IRepository {
   Future<String> createUser(UserModel user);
   Future<String> login(String email, String password);
-  List<ShoppingList> getAllShoppingLists();
+  Future<List<ShoppingList>> getAllShoppingLists();
+  Future<ShoppingList> getShoppingList(String id);
   Future<List<ListItem>> getShoppingListItems(String id);
-  Future<void> deleteShoppingListItem(int id);
-  Future<void> deleteShoppingList(String id);
 }

@@ -7,7 +7,6 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQueryData.fromWindow(window).size.height;
-    print(height);
     return MaterialApp(
       navigatorKey: Modular.navigatorKey,
       title: 'Shopping List',
@@ -15,16 +14,16 @@ class AppWidget extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         textTheme: TextTheme(
           subtitle: TextStyle(
-            fontSize: 16,
+            fontSize: height * .023,
             color: Colors.grey,
             fontWeight: FontWeight.normal,
           ),
           title: TextStyle(
-            fontSize: 22,
+            fontSize: height * .027,
             fontWeight: FontWeight.normal,
           ),
           subhead: TextStyle(
-            fontSize: 15.5,
+            fontSize: height * .022,
             color: Colors.grey,
           ),
         ),
